@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">LoginAndRegister</string>
+
+    <string name="sub_title_home">
+        Thank you for installing me
+        <br>The next step is to <b>Register</b> if you do not have any account</br>
+        <br>If you already have an account just click <b>Login</b></br>
+    </string>
 </resources>
