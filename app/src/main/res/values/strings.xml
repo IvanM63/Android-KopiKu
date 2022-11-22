@@ -6,4 +6,8 @@
         <br>The next step is to <b>Register</b> if you do not have any account</br>
         <br>If you already have an account just click <b>Login</b></br>
     </string>
+
+    <string name="login_no_account">
+        Don\'t have any account? <font color="#6F1A07"><b>REGISTER</b></font>
+    </string>
 </resources>

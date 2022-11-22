@@ -33,9 +33,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/roundstyle"
-        android:backgroundTint="@color/barn_red"
-        android:textColor="@color/white"
+        android:style="@style/ButtonCoklat"
         android:layout_marginTop="35dp"
         android:layout_marginBottom="20dp"
         android:layout_marginHorizontal="20dp"
@@ -44,9 +42,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/roundstyle"
-        android:backgroundTint="@color/barn_red"
-        android:textColor="@color/white"
+        android:style="@style/ButtonCoklat"
         android:layout_marginHorizontal="20dp"
         android:text="Register"/>
 
