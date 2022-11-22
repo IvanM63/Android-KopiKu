@@ -58,20 +58,20 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_login_login"
+        android:id="@+id/login_button_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/kotak"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="30dp"
-        android:style="@style/ButtonCoklat"
+        style="@style/ButtonCoklat"
         android:text="LOGIN" />
 
     <TextView
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button_login_login"
+        android:layout_below="@id/login_button_login"
         android:layout_marginHorizontal="30dp"
         android:layout_marginVertical="10dp"
         android:gravity="right"

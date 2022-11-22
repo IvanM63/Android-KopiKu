@@ -96,13 +96,13 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_login_login"
+        android:id="@+id/register_button_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/register_linear1"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="30dp"
-        android:style="@style/ButtonCoklat"
+        style="@style/ButtonCoklat"
         android:text="REGISTER" />
 
 </RelativeLayout>

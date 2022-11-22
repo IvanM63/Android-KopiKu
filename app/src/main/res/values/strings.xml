@@ -3,8 +3,8 @@
 
     <string name="sub_title_home">
         Thank you for installing me
-        <br>The next step is to <b>Register</b> if you do not have any account</br>
-        <br>If you already have an account just click <b>Login</b></br>
+        The next step is to <b>Register</b> if you do not have any account
+        If you already have an account just click <b>Login</b>
     </string>
 
     <string name="login_no_account">
