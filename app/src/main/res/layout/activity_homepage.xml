@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomepageActivity">
+
+    <ImageView
+        android:id="@+id/top_drawer"
+        android:layout_width="329dp"
+        android:layout_height="265dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/illustration_top_drawer_login" />
+
+    <TextView
+        android:id="@+id/homepage_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="75dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Congrajulation!"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/homepage_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homepage_title"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="5dp"
+        android:gravity="center"
+        android:text="You have succesfuly Log In"
+        android:textColor="@color/barn_red" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homepage_title"
+        android:layout_marginVertical="40dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:style="@style/ButtonCoklat"
+        android:text="LOGOUT" />
+
+</RelativeLayout>

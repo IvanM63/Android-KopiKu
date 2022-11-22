@@ -37,7 +37,7 @@
 
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/login_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_account_copper"
@@ -47,7 +47,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_password_copper"
