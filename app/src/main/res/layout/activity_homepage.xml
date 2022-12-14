@@ -6,47 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".HomepageActivity">
 
-    <ImageView
-        android:id="@+id/top_drawer"
-        android:layout_width="329dp"
-        android:layout_height="265dp"
-        android:layout_alignParentRight="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/illustration_top_drawer_login" />
+    <fragment
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigationView"
+        app:navGraph="@navigation/nav_graph"
+        android:name="androidx.navigation.fragment.NavHostFragment"/>
 
-    <TextView
-        android:id="@+id/homepage_title"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="75dp"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:text="Congrajulation!"
-        android:textColor="@color/black"
-        android:textSize="35dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/homepage_sub_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/homepage_title"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginVertical="5dp"
-        android:gravity="center"
-        android:text="You have succesfuly Log In"
-        android:textColor="@color/barn_red" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/homepage_button_logout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/homepage_title"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginVertical="40dp"
-        android:layout_marginTop="30dp"
-        style="@style/ButtonCoklat"
-        android:text="LOGOUT" />
-
+        android:background="@color/bottom_nav_background"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@drawable/bottom_nav_colors"
+        app:itemTextColor="@drawable/bottom_nav_colors"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

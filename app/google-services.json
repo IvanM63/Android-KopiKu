@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "562943806701",
+    "project_id": "psi-final",
+    "storage_bucket": "psi-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562943806701:android:f43f0537f23a5ab14390e4",
+        "android_client_info": {
+          "package_name": "com.example.loginandregister"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562943806701-jc5mu9ut6qr4ku04av4bv7jpira4dmg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy-lgeOJr3NyI-mHQXaXo-hdBdVBSTeLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562943806701-jc5mu9ut6qr4ku04av4bv7jpira4dmg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

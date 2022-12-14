@@ -10,4 +10,6 @@
     <string name="login_no_account">
         Don\'t have any account? <font color="#6F1A07"><b>REGISTER</b></font>
     </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
