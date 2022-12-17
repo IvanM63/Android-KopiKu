@@ -9,14 +9,16 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dark_grey">#A9A9A9</color>
 
+    <color name="coklat_soft">#9E7759</color>
+
     <color name="barn_red">#6F1A07</color>
     <color name="copper">#A8763E</color>
     <color name="cosmic_latte">#F7F3E3</color>
     <color name="bistre">#2B2118</color>
 
-    <color name="bottom_nav_background">#FEDBD0</color>
-    <color name="bottom_nav_item">#8C706D</color>
-    <color name="bottom_nav_selected_item">#220006</color>
+    <color name="bottom_nav_background">#FFFFFF</color>
+    <color name="bottom_nav_item">#AEAEB2</color>
+    <color name="bottom_nav_selected_item">#9E7759</color>
     <color name="fragment_bg_color">#FDF8F4</color>
 
 </resources>
