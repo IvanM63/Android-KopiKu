@@ -7,16 +7,21 @@
         <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/drawable/ic_account_copper.xml" value="0.201" />
         <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.1355" />
         <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/drawable/ic_cart.xml" value="0.1355" />
+        <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/drawable/ic_home.xml" value="0.1355" />
         <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/drawable/ic_password_copper.xml" value="0.1705" />
         <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/drawable/roundstyle.xml" value="0.201" />
-        <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/activity_homepage.xml" value="0.22" />
+        <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/activity_homepage.xml" value="0.1" />
         <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/all_item.xml" value="0.22" />
         <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/fragment_item_detail_preview.xml" value="0.1743659420289855" />
         <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/fragment_keranjang.xml" value="0.1743659420289855" />
+        <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/fragment_login.xml" value="0.1743659420289855" />
         <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/fragment_pesanan.xml" value="0.1743659420289855" />
-        <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/popular_item.xml" value="0.33" />
+        <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/fragment_register.xml" value="0.1743659420289855" />
+        <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/layout/popular_item.xml" value="0.25" />
         <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20833333333333334" />
         <entry key="..\:/Android Projekt/AndroisStudio-login_and_register/app/src/main/res/menu/menu.xml" value="0.209375" />
       </map>

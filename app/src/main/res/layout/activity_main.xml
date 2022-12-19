@@ -1,52 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cosmic_latte"
     tools:context=".MainActivity">
 
-    <ImageView
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView2"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/illustration_welcome"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:text="Welcome to INI Application!"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="5dp"
-        android:textSize="13dp"
-        android:lineHeight="25sp"
-        android:text="@string/sub_title_home"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/home_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/ButtonCoklat"
-        android:layout_marginTop="35dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginHorizontal="20dp"
-        android:text="Login"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/home_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/ButtonCoklat"
-        android:layout_marginHorizontal="20dp"
-        android:text="Register"/>
-
-
-</LinearLayout>
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/initial_graph" />
+</FrameLayout>

@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.loginandregister.adapters.AllItemsAdapter
 import com.example.loginandregister.adapters.PopularAdapter
 import com.example.loginandregister.databinding.FragmentHomeBinding
 import com.example.loginandregister.util.Resource
@@ -23,6 +25,7 @@ private val TAG = "HomeFragment"
 class HomeFragment : Fragment(R.layout.fragment_home) {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var popularItemAdapter: PopularAdapter
+    private lateinit var allItemsAdapter: AllItemsAdapter
     private val viewModel by viewModels<HomeViewModel>()
 
     override fun onCreateView(
@@ -38,6 +41,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         Toast.makeText(requireContext(),"aaa", Toast.LENGTH_SHORT).show()
         setupPopularAdapterRV()
+        setupAllItemRv()
+        //Popular Item
         lifecycleScope.launchWhenCreated {
             viewModel.popularItem.collectLatest {
                 when (it) {
@@ -56,6 +61,34 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     else -> Unit
                 }
             }
+        }
+        //All item
+        lifecycleScope.launchWhenCreated {
+            viewModel.allItem.collectLatest {
+                when (it) {
+                    is Resource.Loading -> {
+                        //showLoading()
+                    }
+                    is Resource.Success -> {
+                        allItemsAdapter.differ.submitList(it.data)
+                        //hideLoading()
+                    }
+                    is Resource.Error -> {
+                        //hideLoading()
+                        Log.e(TAG, it.message.toString())
+                        Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
+                    }
+                    else -> Unit
+                }
+            }
+        }
+    }
+
+    private fun setupAllItemRv() {
+        allItemsAdapter = AllItemsAdapter()
+        binding.rvAllItem.apply {
+            layoutManager = GridLayoutManager(requireContext(), 2,GridLayoutManager.VERTICAL,false)
+            adapter = allItemsAdapter
         }
     }
 

@@ -20,4 +20,13 @@
         android:name="com.example.loginandregister.PesananFragment"
         android:label="fragment_pesanan"
         tools:layout="@layout/fragment_pesanan" />
+    <fragment
+        android:id="@+id/itemDetailPreview"
+        android:name="com.example.loginandregister.ItemDetailPreview"
+        android:label="fragment_item_detail_preview"
+        tools:layout="@layout/fragment_item_detail_preview">
+        <argument android:name="Item"
+            app:argType="com.example.loginandregister.ItemsModel" />
+    </fragment>
+
 </navigation>

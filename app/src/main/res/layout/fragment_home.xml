@@ -70,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Pesen lagi yuk!"
+                android:text="Produk Kami"
                 android:textStyle="bold"
                 android:textSize="18sp"/>
 
@@ -86,9 +86,9 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_pesenLagi"
+            android:id="@+id/rv_all_item"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="1000dp"
             android:layout_margin="5dp"/>
 
 

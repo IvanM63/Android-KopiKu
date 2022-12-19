@@ -16,11 +16,17 @@ class HomeViewModel @Inject constructor(
     private val firestore: FirebaseFirestore
 ): ViewModel() {
 
+    //Popular Item
     private val _popularItems = MutableStateFlow<Resource<List<ItemsModel>>>(Resource.Unspecified())
     val popularItem: StateFlow<Resource<List<ItemsModel>>> = _popularItems
 
+    //All Item
+    private val _allItems = MutableStateFlow<Resource<List<ItemsModel>>>(Resource.Unspecified())
+    val allItem: StateFlow<Resource<List<ItemsModel>>> = _allItems
+
     init {
         fetchPopularItems()
+        fetchAllItems()
     }
 
     fun fetchPopularItems() {
@@ -37,6 +43,23 @@ class HomeViewModel @Inject constructor(
             }.addOnFailureListener {
                 viewModelScope.launch {
                     _popularItems.emit(Resource.Error(it.toString()))
+                }
+            }
+    }
+
+    fun fetchAllItems() {
+        viewModelScope.launch {
+            _allItems.emit(Resource.Loading())
+        }
+        firestore.collection("Items")
+            .get().addOnSuccessListener { result ->
+                val allItemsList = result.toObjects(ItemsModel::class.java)
+                viewModelScope.launch {
+                    _allItems.emit(Resource.Success(allItemsList))
+                }
+            }.addOnFailureListener {
+                viewModelScope.launch {
+                    _allItems.emit(Resource.Error(it.toString()))
                 }
             }
     }

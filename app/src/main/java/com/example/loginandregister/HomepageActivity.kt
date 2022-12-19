@@ -18,7 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class HomepageActivity : AppCompatActivity() {
 
-    private lateinit var navController: NavController
+    //private lateinit var navController: NavController
     private lateinit var binding:ActivityHomepageBinding
     private lateinit var auth: FirebaseAuth
 
@@ -31,10 +31,10 @@ class HomepageActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         //NAV BAR
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.mainContainer) as NavHostFragment
-        navController = navHostFragment.navController
+        //val navHostFragment = supportFragmentManager.findFragmentById(R.id.mainContainer) as NavHostFragment
+        //navController = navHostFragment.navController
 
-        setupWithNavController(binding.bottomNavigationView, navController)
+        //setupWithNavController(binding.bottomNavigationView, navController)
 
         //Logout Button
         /*binding.homepageButtonLogout.setOnClickListener {

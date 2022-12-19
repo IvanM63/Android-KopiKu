@@ -1,5 +1,9 @@
 package com.example.loginandregister.models
 
-data class UserModel (var name:String, var email: String, var password:String) {
-
+data class UserModel (
+    val name:String,
+    val email: String,
+    val password:String)
+{
+    constructor(): this("","","")
 }
