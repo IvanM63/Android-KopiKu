@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity"
+    android:background="#FBFBFB"
+    >
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back_button"
+        />
+
+    <ImageView
+        android:id="@+id/unsplash_rl"
+        android:layout_width="472dp"
+        android:layout_height="472dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="-35dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/arabica" />
+
+    <FrameLayout
+        android:layout_width="390dp"
+        android:layout_height="900dp">
+
+        <View
+            android:id="@+id/detail"
+            android:layout_width="392dp"
+            android:layout_height="390dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="456dp"
+            android:background="@drawable/dtl"
+            />
+
+        <TextView
+            android:id="@+id/arabica_cof"
+            android:layout_width="138dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="480dp"
+            android:layout_marginLeft="19dp"
+            android:text="Arabica Coffee"
+            android:textSize="20sp"
+            android:fontFamily="@font/nunito"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:lineSpacingExtra="-2sp"
+            android:gravity="top"
+            />
+        <TextView
+            android:id="@+id/harga"
+            android:layout_width="138dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="510dp"
+            android:layout_marginLeft="19dp"
+            android:text="Rp. 50.000"
+            android:textSize="20sp"
+            android:fontFamily="@font/nunito"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:lineSpacingExtra="-2sp"
+            android:gravity="top"
+            />
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="540dp"
+            android:layout_marginLeft="19dp"
+            android:background="@drawable/bintang"
+            />
+        <TextView
+            android:id="@+id/ulas"
+            android:layout_width="170dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="544dp"
+            android:layout_marginLeft="142dp"
+            android:text="4.8 (1.3K Ulasan)"
+            android:textSize="16sp"
+            android:fontFamily="@font/nunito"
+            android:textColor="#000000"
+            android:lineSpacingExtra="-2sp"
+            android:gravity="top"
+            />
+
+        <TextView
+            android:id="@+id/des"
+            android:layout_width="138dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="580dp"
+            android:layout_marginLeft="19dp"
+            android:text="Deskripsi"
+            android:textSize="20sp"
+            android:fontFamily="@font/nunito"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:lineSpacingExtra="-2sp"
+            android:gravity="top"
+            />
+
+        <TextView
+            android:id="@+id/penilaian"
+            android:layout_width="138dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="580dp"
+            android:layout_marginLeft="130dp"
+            android:text="Penilaian"
+            android:textSize="20sp"
+            android:fontFamily="@font/nunito"
+            android:textColor="#000000"
+            android:lineSpacingExtra="-2sp"
+            android:gravity="top"
+            />
+        <TextView
+            android:id="@+id/deskrp"
+            android:layout_width="360dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="620dp"
+            android:layout_marginLeft="19dp"
+            android:text="Kopi arabika dikenal sebagai kopi Arab adalah spesies dari genus Coffea. Spesies ini diyakini sebagai spesies kopi pertama yang dibudidayakan, dan merupakan kultivar dominan."
+            android:textSize="16sp"
+            android:fontFamily="@font/nunito"
+            android:textColor="#000000"
+            android:lineSpacingExtra="-2sp"
+            android:gravity="top"
+            />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="325dp"
+            android:layout_height="53dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="34dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="750dp"
+            android:text="Tambah ke Keranjang"
+            android:fontFamily="@font/nunito"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/coklat"
+            />
+    </FrameLayout>
+</RelativeLayout>
