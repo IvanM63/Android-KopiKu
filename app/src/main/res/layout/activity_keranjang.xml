@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity"
+    android:background="#FBFBFB"
+    >
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back_button" />
+    <TextView
+        android:layout_width="114dp"
+        android:layout_height="30dp"
+        android:text="Back"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="17sp"
+        android:textColor="@color/coklat"
+        android:textStyle="bold"
+        android:fontFamily="@font/nunito"
+        />
+    <TextView
+        android:layout_width="114dp"
+        android:layout_height="30dp"
+        android:text="Keranjang"
+        android:layout_marginTop="53dp"
+        android:layout_marginLeft="131dp"
+        android:textSize="24sp"
+        android:textColor="@color/coklat"
+        android:textStyle="bold"
+        android:fontFamily="@font/nunito"
+        />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginLeft="55dp"
+            android:background="@drawable/product_card"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="123dp"
+            android:layout_marginLeft="75dp"
+            android:background="@drawable/arabica"
+            />
+        <TextView
+            android:layout_width="124dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="123dp"
+            android:layout_marginLeft="120dp"
+            android:text="Arabica Coffee
+Rp. 50.000"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"
+            android:textColor="#000000"
+            />
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="135dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/ceklis"
+            />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="135dp"
+            android:layout_marginLeft="260dp"
+            android:background="@drawable/minus_button"
+            />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginLeft="295dp"
+            android:text="0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"
+            android:textColor="#000000"
+            />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="135dp"
+            android:layout_marginLeft="320dp"
+            android:background="@drawable/plus_button"
+            />
+
+    </FrameLayout>
+    
+    <Button
+        android:id="@+id/button"
+        android:layout_width="325dp"
+        android:layout_height="53dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="700dp"
+        android:backgroundTint="@color/coklat"
+        android:fontFamily="@font/nunito"
+        android:text="CheckOut"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+
+    <FrameLayout
+        android:layout_width="390dp"
+        android:layout_height="83.5dp"
+        android:layout_marginTop="763dp"
+        android:background="@drawable/tab_bar" />
+
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="770dp"
+        android:background="@drawable/home"
+        />
+
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="91dp"
+        android:layout_marginTop="770dp"
+        android:background="@drawable/pesanan" />
+
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="159dp"
+        android:layout_marginTop="770dp"
+        android:background="@drawable/keranjang" />
+
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="232dp"
+        android:layout_marginTop="770dp"
+        android:background="@drawable/chat" />
+
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="305dp"
+        android:layout_marginTop="770dp"
+        android:background="@drawable/profile" />
+
+</RelativeLayout>
