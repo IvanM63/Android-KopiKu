@@ -3,11 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/initial_graph"
-    app:startDestination="@id/loginFragment2">
-
+    app:startDestination="@id/welcomeFragment">
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.loginandregister.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment2_to_registerFragment2"
+            app:destination="@id/registerFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment2"
-        android:name="com.example.loginandregister.RegisterFragment"
+        android:name="com.example.loginandregister.fragments.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -15,12 +23,12 @@
             app:destination="@id/loginFragment2" />
     </fragment>
     <fragment
-        android:id="@+id/loginFragment2"
-        android:name="com.example.loginandregister.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.loginandregister.fragments.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
         <action
-            android:id="@+id/action_loginFragment2_to_registerFragment2"
-            app:destination="@id/registerFragment2" />
+            android:id="@+id/action_welcomeFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
     </fragment>
 </navigation>

@@ -3,13 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".KeranjangFragment">
+    tools:context=".unused.KeranjangFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:gravity="center"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_carts"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello Keranjang" />
+        android:layout_height="wrap_content"/>
 
 </FrameLayout>

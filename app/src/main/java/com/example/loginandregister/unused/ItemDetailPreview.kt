@@ -1,4 +1,4 @@
-package com.example.loginandregister
+package com.example.loginandregister.unused
 
 import android.annotation.SuppressLint
 import android.graphics.Paint

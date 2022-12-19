@@ -1,24 +1,20 @@
 package com.example.loginandregister
 
 import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.AttributeSet
 import android.view.View
-import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
-import com.example.loginandregister.adapters.PopularAdapter
 import com.example.loginandregister.databinding.ActivityHomepageBinding
 import com.google.firebase.auth.FirebaseAuth
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
 class HomepageActivity : AppCompatActivity() {
 
-    //private lateinit var navController: NavController
+    private lateinit var navController: NavController
     private lateinit var binding:ActivityHomepageBinding
     private lateinit var auth: FirebaseAuth
 
@@ -31,10 +27,10 @@ class HomepageActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         //NAV BAR
-        //val navHostFragment = supportFragmentManager.findFragmentById(R.id.mainContainer) as NavHostFragment
-        //navController = navHostFragment.navController
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.mainContainer) as NavHostFragment
+        navController = navHostFragment.navController
 
-        //setupWithNavController(binding.bottomNavigationView, navController)
+        setupWithNavController(binding.bottomNavigationView, navController)
 
         //Logout Button
         /*binding.homepageButtonLogout.setOnClickListener {

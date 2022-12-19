@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterFragment">
+    tools:context=".fragments.RegisterFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -80,18 +80,7 @@
             android:drawablePadding="15dp"
             android:ems="10"
             android:hint="Password"
-            android:inputType="textEmailAddress" />
-
-        <EditText
-            android:id="@+id/register_password_confirm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="8dp"
-            android:drawableLeft="@drawable/ic_account_copper"
-            android:drawablePadding="15dp"
-            android:ems="10"
-            android:hint="Confirm Password"
-            android:inputType="textEmailAddress" />
+            android:inputType="textPassword" />
 
     </LinearLayout>
 
