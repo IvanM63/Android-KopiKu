@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_detailItemFragment2"
             app:destination="@id/detailItemFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
     </fragment>
     <fragment
         android:id="@+id/keranjangFragment"
@@ -58,5 +61,14 @@
         <action
             android:id="@+id/action_detailItemFragment2_to_keranjangFragment"
             app:destination="@id/keranjangFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.loginandregister.fragments.homepage.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

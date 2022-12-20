@@ -1,27 +1,24 @@
 package com.example.loginandregister.adapters
 
 import android.content.Context
-import android.content.res.ColorStateList
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.loginandregister.databinding.AllItemBinding
+import com.example.loginandregister.databinding.PopularItemBinding
 import com.example.loginandregister.models.ItemsModel
 
-class ItemsShowAdapter(
+class ItemsPopularAdapter(
     private val context: Context,
     private val list: List<ItemsModel>,
-    private val productClickInterface: ProductOnClickInterface,
+) : RecyclerView.Adapter<ItemsPopularAdapter.ViewHolder>(){
 
-    ) : RecyclerView.Adapter<ItemsShowAdapter.ViewHolder>(){
-
-    inner class ViewHolder(val binding: AllItemBinding) :
-            RecyclerView.ViewHolder(binding.root)
+    inner class ViewHolder(val binding: PopularItemBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(AllItemBinding.inflate(
+        return ViewHolder(
+            PopularItemBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false))
@@ -32,15 +29,14 @@ class ItemsShowAdapter(
         val image = item.img_url
 
         holder.binding.apply {
-            Glide.with(context).load(image).into(holder.binding.allImage)
-            allJudul.text = item.name
-            allPrice.text = "Rp ${item.price}"
+            Glide.with(context).load(image).into(holder.binding.popImage)
+            popJudul.text = item.name
+            popPrice.text = "Rp ${item.price}"
         }
 
-        holder.itemView.setOnClickListener {
+        /*holder.itemView.setOnClickListener {
             productClickInterface.onClickProduct(list[position])
-        }
-
+        }*/
 
     }
 
@@ -48,9 +44,4 @@ class ItemsShowAdapter(
         return list.size
     }
 
-
-}
-
-interface ProductOnClickInterface {
-    fun onClickProduct(item: ItemsModel)
 }

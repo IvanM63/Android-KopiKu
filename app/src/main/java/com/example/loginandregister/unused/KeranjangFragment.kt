@@ -67,7 +67,6 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
         binding.rvCarts.adapter = adapter
         binding.rvCarts.layoutManager = layoutManager
 
-
         /*binding.btnCartCheckout.setOnClickListener {
 
             requireActivity().toast("Whooooa!! You've Ordered Products worth ${totalPrice}\n Your Product will be delivered in next 7 days")
@@ -78,7 +77,6 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
             // TODO: remove the data of the Products from the fireStore after checkout or insert a boolean isDelivered
             adapter.notifyDataSetChanged()
         }*/
-
 
     }
 

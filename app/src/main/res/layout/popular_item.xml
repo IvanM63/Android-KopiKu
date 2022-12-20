@@ -6,6 +6,7 @@
     android:layout_margin="5dp"
     app:cardCornerRadius="15dp">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,6 +54,15 @@
                 android:layout_margin="3dp"
                 android:text="1.3K ulasan"
                 android:paddingLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/pop_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:text="Rp 10000"/>
 
         </LinearLayout>
 
