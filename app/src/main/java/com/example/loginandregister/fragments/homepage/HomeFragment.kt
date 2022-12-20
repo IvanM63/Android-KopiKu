@@ -105,7 +105,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductOnClickInterface {
     }
 
     private fun setItemsPopular() {
-        val valueEvent = object : ValueEventListener {
+        val valueEvent2 = object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 itemListPopular.clear()
@@ -127,7 +127,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductOnClickInterface {
 
         }
 
-        databaseReference.addValueEventListener(valueEvent)
+        databaseReference.addValueEventListener(valueEvent2)
     }
 
     override fun onClickProduct(item: ItemsModel) {

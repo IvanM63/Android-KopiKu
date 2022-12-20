@@ -2,6 +2,7 @@ package com.example.loginandregister.unused
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -29,6 +30,7 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
     private var totalPrice = 0
 
     private var orderDatabaseReference = Firebase.firestore.collection("orders")
+    private var pesananDatabaseReference = Firebase.firestore.collection("pesanan")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,6 +47,7 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
         binding = FragmentKeranjangBinding.bind(view)
         auth = FirebaseAuth.getInstance()
 
+
         //Nav Bar jadi keliatan lagi
         val bottomNavigation =
             requireActivity().findViewById<BottomNavigationView>(R.id.bottom_navigationView)
@@ -57,8 +60,6 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
 
 
         val layoutManager = LinearLayoutManager(context)
-
-
         cartList = ArrayList()
 
         retrieveCartItems()
@@ -67,17 +68,20 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
         binding.rvCarts.adapter = adapter
         binding.rvCarts.layoutManager = layoutManager
 
-        /*binding.btnCartCheckout.setOnClickListener {
+        binding.keranjangCheckout.setOnClickListener {
+            if (cartList.isEmpty()) {
+                Toast.makeText(requireActivity(),"Keranjang kamu kosong nih!", Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(requireActivity(),"Wah! kamu baru saja memesan dengan total Rp ${subTotalPrice}", Toast.LENGTH_LONG).show()
+                cartList.clear()
+                binding.keranjangSubtotal.text ="0"
+                // TODO: remove the data of the Products from the fireStore after checkout or insert a boolean isDelivered
+                pesananDatabaseReference.whereEqualTo("uid",auth.currentUser!!.uid).get().addOnCompleteListener {productToDelete ->
 
-            requireActivity().toast("Whooooa!! You've Ordered Products worth ${totalPrice}\n Your Product will be delivered in next 7 days")
-            cartList.clear()
-            binding.tvLastSubTotalprice.text ="0"
-            binding.tvLastTotalPrice.text ="Min 1 product is Required"
-            binding.tvLastTotalPrice.setTextColor(Color.RED)
-            // TODO: remove the data of the Products from the fireStore after checkout or insert a boolean isDelivered
-            adapter.notifyDataSetChanged()
-        }*/
-
+                }
+                adapter.notifyDataSetChanged()
+            }
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -94,13 +98,13 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
                 for (item in querySnapshot) {
                     val cartProduct = item.toObject<KeranjangModel>()
 
-
                     cartList.add(cartProduct)
                     subTotalPrice += cartProduct.price!!.toInt()
                     totalPrice += cartProduct.price!!.toInt()
-                    /*binding.tvLastSubTotalprice.text = subTotalPrice.toString()
-                    binding.tvLastTotalPrice.text = totalPrice.toString()
-                    binding.tvLastSubTotalItems.text = "SubTotal Items(${cartList.size})"*/
+
+                    binding.keranjangSubtotal.text = "Rp ${subTotalPrice.toString()}"
+                    //binding.tvLastTotalPrice.text = totalPrice.toString()
+                    //binding.tvLastSubTotalItems.text = "SubTotal Items(${cartList.size})"
                     adapter.notifyDataSetChanged()
 
 

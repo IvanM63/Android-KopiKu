@@ -44,19 +44,6 @@ class KeranjangAdapter(
 
         var count = holder.binding.cartJmlh.text.toString().toInt()
 
-        /*holder.binding.btnCartItemAdd.setOnClickListener {
-//            count++
-            // TODO: Update Quantity in Database also
-//            holder.binding.tvCartItemCount.text = count.toString()
-
-        }*/
-
-        /*holder.binding.btnCartItemMinus.setOnClickListener {
-//            count--
-            // TODO: Update Quantity in Database also
-//            holder.binding.tvCartItemCount.text = count.toString()
-        }*/
-
         holder.itemView.setOnLongClickListener {
             onLongClickRemove.onLongRemove(currentItem , position)
             true

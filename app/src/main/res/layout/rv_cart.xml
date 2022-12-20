@@ -27,7 +27,6 @@
             android:id="@+id/cart_judul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:textSize="18sp"
             android:text="Arabica Coffe"
             android:textColor="@color/black"/>
@@ -35,7 +34,6 @@
             android:id="@+id/cart_harga"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:textSize="15sp"
             android:text="Rp 5000"
             android:textColor="@color/black"/>
