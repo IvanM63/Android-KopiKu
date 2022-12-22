@@ -84,6 +84,9 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
     implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
 
+    //CircleImage
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
 }
 
 // Allow references to generated code

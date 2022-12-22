@@ -50,7 +50,7 @@
             android:text="Arabica Coffee"
             android:textColor="#000000"
             android:textSize="23sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/nbold" />
 
         <TextView
             android:id="@+id/detail_harga"
@@ -63,7 +63,7 @@
             android:text="Rp. 50.000"
             android:textColor="#000000"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/nbold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -97,6 +97,7 @@
                 android:layout_marginTop="540dp"
                 android:background="@drawable/ic_baseline_star_24" />
             <TextView
+                android:fontFamily="@font/nmedium"
                 android:id="@+id/ulas"
                 android:layout_width="170dp"
                 android:layout_height="25dp"
@@ -125,9 +126,10 @@
                 android:text="Deskripsi"
                 android:textColor="#000000"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/nbold" />
 
             <TextView
+                android:fontFamily="@font/nmedium"
                 android:id="@+id/penilaian"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
@@ -144,6 +146,7 @@
 
 
         <TextView
+            android:fontFamily="@font/nmedium"
             android:id="@+id/detail_desc"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
@@ -167,6 +170,7 @@
             android:text="Tambah ke Keranjang"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textSize="16dp"
+            android:fontFamily="@font/nbold" />
     </FrameLayout>
 </RelativeLayout>

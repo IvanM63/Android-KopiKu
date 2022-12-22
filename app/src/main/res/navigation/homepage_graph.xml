@@ -94,5 +94,8 @@
         <action
             android:id="@+id/action_checkoutFragment_to_keranjangFragment"
             app:destination="@id/keranjangFragment" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_pesananFragment"
+            app:destination="@id/pesananFragment" />
     </fragment>
 </navigation>

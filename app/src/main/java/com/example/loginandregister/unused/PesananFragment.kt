@@ -9,11 +9,14 @@ import android.view.ViewGroup
 import android.widget.LinearLayout.VERTICAL
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.loginandregister.R
 import com.example.loginandregister.adapters.KeranjangAdapter
 import com.example.loginandregister.adapters.PesananAdapter
+import com.example.loginandregister.adapters.ProductOnClickInterface
 import com.example.loginandregister.databinding.FragmentKeranjangBinding
 import com.example.loginandregister.databinding.FragmentLoginBinding
 import com.example.loginandregister.databinding.FragmentPesananBinding
+import com.example.loginandregister.models.ItemsModel
 import com.example.loginandregister.models.KeranjangModel
 import com.example.loginandregister.models.PesananModel
 import com.google.firebase.auth.FirebaseAuth
@@ -21,7 +24,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 
-class PesananFragment : Fragment() {
+class PesananFragment : Fragment(R.layout.fragment_pesanan) {
     private lateinit var binding: FragmentPesananBinding
     private lateinit var pesananList: ArrayList<PesananModel>
     private lateinit var auth: FirebaseAuth
@@ -78,5 +81,7 @@ class PesananFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+
+
 
 }

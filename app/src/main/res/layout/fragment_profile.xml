@@ -1,14 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/coklat_soft"
     tools:context=".fragments.homepage.ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <View
+        android:id="@+id/detail"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="125dp"
+        android:layout_marginBottom="-20dp"
+        android:background="@drawable/roundstyle30dp"
+        android:backgroundTint="#FBFBFB" />
 
-</FrameLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_amogus"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/amogus"/>
+
+    <TextView
+        android:id="@+id/profile_fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_amogus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nbold"
+        android:text="Amogus"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+    <TextView
+        android:fontFamily="@font/nmedium"
+        android:id="@+id/profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_fullname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="amogus@gmail.com"
+        android:textColor="#7C7C7C"
+        android:textSize="15dp" />
+
+    <View
+        android:id="@+id/profile_editProfil"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/garis_atas"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/white" />
+
+    <ImageView
+        android:id="@+id/helm"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/garis_atas"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/bg_send"
+        android:scaleType="center"
+        android:src="@drawable/ic_baseline_account_blue" />
+
+    <TextView
+        android:id="@+id/tv_editProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/garis_atas"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginTop="34dp"
+        android:layout_toRightOf="@+id/helm"
+        android:fontFamily="@font/nbold"
+        android:text="Edit Profile"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/garis_atas"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="34dp"
+        android:layout_marginRight="40dp"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_editProfil">
+
+        <View
+            android:id="@+id/profile_security"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@color/white" />
+
+        <ImageView
+            android:id="@+id/helm2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#FFF6E4"
+            android:scaleType="center"
+            android:src="@drawable/ic_baseline_security_24" />
+
+        <TextView
+            android:id="@+id/tv_editProfile2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="34dp"
+            android:layout_toRightOf="@+id/helm2"
+            android:fontFamily="@font/nbold"
+            android:text="Keamanan Akun"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="34dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl1">
+
+        <View
+            android:id="@+id/profile_bantuan"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@color/white" />
+
+        <ImageView
+            android:id="@+id/helm3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#F1EDFC"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_question_mark" />
+
+        <TextView
+            android:id="@+id/tv_editProfile3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="34dp"
+            android:layout_toRightOf="@+id/helm3"
+            android:fontFamily="@font/nbold"
+            android:text="Bantuan dan Laporan"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="34dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl2">
+
+        <View
+            android:id="@+id/profile_logout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@color/white" />
+
+        <ImageView
+            android:id="@+id/helm4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#FFECE8"
+            android:scaleType="center"
+            android:src="@drawable/ic_baseline_arrow_forward_red" />
+
+        <TextView
+            android:fontFamily="@font/nbold"
+            android:id="@+id/tv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="34dp"
+            android:layout_toRightOf="@+id/helm4"
+            android:text="Log Out"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/garis_atas"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/profile_email"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/underline" />
+
+
+
+</RelativeLayout>

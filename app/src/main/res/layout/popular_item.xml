@@ -4,32 +4,36 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp"
-    app:cardCornerRadius="15dp">
+    app:cardCornerRadius="8dp">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp">
+        android:orientation="vertical">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/pop_image"
             android:layout_width="280dp"
             android:layout_height="280dp"
-            app:riv_corner_radius="12dp"
+            app:riv_corner_radius="8dp"
             android:scaleType="centerCrop"
+
             android:src="@mipmap/kopi1"/>
         <TextView
+            android:fontFamily="@font/nbold"
             android:id="@+id/pop_judul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
             android:text="Arabica Coffe"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:textSize="27sp"/>
+            android:textSize="24sp"/>
 
         <LinearLayout
+            android:layout_marginHorizontal="9dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -40,6 +44,7 @@
                 android:layout_gravity="center"
                 android:src="@drawable/ic_baseline_star_24"/>
             <TextView
+                android:fontFamily="@font/nmedium"
                 android:id="@+id/pop_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -48,6 +53,7 @@
                 android:textColor="@color/black"
                 />
             <TextView
+                android:fontFamily="@font/nmedium"
                 android:id="@+id/pop_ulasan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -56,6 +62,7 @@
                 android:paddingLeft="10dp"/>
 
             <TextView
+                android:fontFamily="@font/nmedium"
                 android:id="@+id/pop_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -67,15 +74,18 @@
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
+            android:fontFamily="@font/nbold"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
+            android:layout_marginVertical="15dp"
             android:textColor="@color/white"
             android:text="Tambah Ke Keranjang"
-            android:textSize="15sp"
+            android:textSize="17sp"
             android:textAllCaps="false"
-            android:layout_margin="8dp"
-            android:background="@color/coklat_soft"/>
+
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@color/coklat_soft"/>
 
     </LinearLayout>
 

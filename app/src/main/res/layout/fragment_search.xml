@@ -12,6 +12,7 @@
         android:orientation="vertical">
 
         <EditText
+            android:fontFamily="@font/nmedium"
             android:id="@+id/search_box"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,6 +24,8 @@
             android:drawablePadding="5dp"
             android:inputType="text"
             android:lines="1"/>
+
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_search"

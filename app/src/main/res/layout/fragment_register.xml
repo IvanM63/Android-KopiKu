@@ -12,11 +12,11 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="75dp"
+        android:fontFamily="@font/nbold"
         android:gravity="center"
         android:text="Create Your Account"
         android:textColor="@color/black"
-        android:textSize="35dp"
-        android:textStyle="bold" />
+        android:textSize="35dp" />
 
     <TextView
         android:id="@+id/register_sub_title"
@@ -25,6 +25,7 @@
         android:layout_below="@id/register_title"
         android:layout_marginHorizontal="30dp"
         android:layout_marginVertical="5dp"
+        android:fontFamily="@font/nmedium"
         android:gravity="center"
         android:text="Get ready to make some spicyzz"
         android:textColor="@color/barn_red" />
@@ -39,6 +40,7 @@
         android:orientation="vertical">
 
         <EditText
+            android:fontFamily="@font/nmedium"
             android:id="@+id/register_full_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,6 +52,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
+            android:fontFamily="@font/nmedium"
             android:id="@+id/register_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,6 +64,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
+            android:fontFamily="@font/nmedium"
             android:id="@+id/register_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,6 +76,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
+            android:fontFamily="@font/nmedium"
             android:id="@+id/register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,13 +90,15 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:fontFamily="@font/nmedium"
         android:id="@+id/register_button_register"
         style="@style/ButtonCoklat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/register_linear1"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
+        android:textSize="17dp"
         android:text="REGISTER" />
 
 </RelativeLayout>

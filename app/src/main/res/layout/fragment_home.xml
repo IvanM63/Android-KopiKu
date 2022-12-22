@@ -1,104 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FBFBFB"
     tools:context=".fragments.homepage.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/search_box"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/white"
-            android:drawableLeft="@drawable/ic_baseline_search_24"
-            android:drawablePadding="5dp"
-            android:hint="Search"
-            android:padding="13dp" />
+            android:orientation="vertical">
 
-        <!-- Pilihan Terlaris -->
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="13dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
+            <View
+                android:layout_marginTop="-20dp"
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:backgroundTint="@color/coklat_soft"
+                android:background="@drawable/roundstylebig" />
 
             <TextView
+                android:fontFamily="@font/nmedium"
+                android:id="@+id/search_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Pilihan Terlaris"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/roundstyle"
+                android:backgroundTint="@color/white"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:drawablePadding="5dp"
+                android:hint="Search"
+                android:padding="13dp" />
 
-            <TextView
+            <RelativeLayout
+                android:id="@+id/rl69"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Lihat Semua"
-                android:gravity="right"
-                android:textColor="@color/coklat_soft"
-                android:textSize="18sp"/>
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="30dp"
+                android:layout_below="@id/search_box">
 
-        </LinearLayout>
+                <View
+                    android:id="@+id/profile_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="@drawable/roundstyle"
+                    android:backgroundTint="@color/white" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_popular"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"/>
+                <TextView
+                    android:fontFamily="@font/nmedium"
+                    android:id="@+id/tv_saldo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Saldo"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-        <!-- Pesen lagi yuk! -->
+                <TextView
+                    android:fontFamily="@font/nbold"
+                    android:id="@+id/ed_saldo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@id/tv_saldo"
+                    android:text="Rp 20000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="13dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/tv_saldo"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@id/ed_saldo"
+                    android:src="@drawable/ic_baseline_account_balance_wallet_24" />
 
-            <TextView
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/roundstyle"
+                    android:backgroundTint="@color/coklat_soft"
+                    android:fontFamily="@font/nmedium"
+                    android:text="+ Top Up"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ly1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Produk Kami"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
+                android:layout_below="@id/rl69"
+                android:layout_marginHorizontal="13dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-            <TextView
+                <TextView
+                    android:fontFamily="@font/nbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pilihan Terlaris"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:fontFamily="@font/nmedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Lihat Semua"
+                    android:gravity="right"
+                    android:textColor="@color/coklat_soft"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_popular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Lihat Semua"
-                android:gravity="right"
-                android:textColor="@color/coklat_soft"
-                android:textSize="18sp"/>
+                android:layout_below="@+id/ly1"
+                android:layout_margin="5dp" />
 
-        </LinearLayout>
+            <!-- Pesen lagi yuk! -->
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_all_item"
-            android:layout_width="match_parent"
-            android:layout_height="1000dp"
-            android:layout_margin="5dp"/>
+            <LinearLayout
+                android:id="@+id/ly2"
+                android:layout_below="@+id/rv_popular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="13dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:fontFamily="@font/nbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Produk Kami"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:fontFamily="@font/nmedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Lihat Semua"
+                    android:gravity="right"
+                    android:textColor="@color/coklat_soft"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_all_item"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:layout_below="@+id/ly2"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp" />
 
 
-    </LinearLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
 
 
 
-
-
-</ScrollView>
+</RelativeLayout>

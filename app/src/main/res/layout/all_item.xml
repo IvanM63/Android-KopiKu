@@ -4,33 +4,37 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp"
-    app:cardCornerRadius="15dp">
+    app:cardCornerRadius="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp">
+        android:orientation="vertical">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/all_image"
             android:layout_width="180dp"
             android:layout_height="180dp"
-            app:riv_corner_radius="12dp"
-            android:scaleType="centerCrop"
+            app:riv_corner_radius="8dp"
+            android:scaleType="fitXY"
             android:src="@mipmap/kopi1"/>
         <TextView
+            android:fontFamily="@font/nbold"
             android:id="@+id/all_judul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="5dp"
             android:text="Arabica Coffe"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:textSize="20sp"/>
+            android:textSize="16sp"/>
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -39,6 +43,7 @@
                 android:layout_gravity="center"
                 android:src="@drawable/ic_baseline_star_24"/>
             <TextView
+                android:fontFamily="@font/nmedium"
                 android:id="@+id/all_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -48,6 +53,7 @@
                 />
 
             <TextView
+                android:fontFamily="@font/nmedium"
                 android:id="@+id/all_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

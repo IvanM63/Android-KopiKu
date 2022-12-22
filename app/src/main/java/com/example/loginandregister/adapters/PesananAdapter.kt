@@ -7,11 +7,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.loginandregister.databinding.RvCartBinding
 import com.example.loginandregister.databinding.RvPesananBinding
+import com.example.loginandregister.models.ItemsModel
 import com.example.loginandregister.models.PesananModel
+import com.example.loginandregister.unused.PesananFragment
 
 class PesananAdapter(
-    private val context : Context,
+    private val context: Context,
     private val list:ArrayList<PesananModel>,
+
 ): RecyclerView.Adapter<PesananAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: RvPesananBinding):RecyclerView.ViewHolder(binding.root)
@@ -27,10 +30,13 @@ class PesananAdapter(
         holder.binding.pesananStatus.text = "Status : ${currentItem.status}"
         holder.binding.pesananEdTotal.text = "Rp ${currentItem.sub_total}"
 
+
     }
 
     override fun getItemCount(): Int {
         return list.size
     }
+
+
 
 }

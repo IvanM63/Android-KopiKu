@@ -24,6 +24,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:fontFamily="@font/nmedium"
             android:id="@+id/cart_judul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,6 +32,7 @@
             android:text="Arabica Coffe"
             android:textColor="@color/black"/>
         <TextView
+            android:fontFamily="@font/nmedium"
             android:id="@+id/cart_harga"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,6 +43,7 @@
     </LinearLayout>
 
      <TextView
+         android:fontFamily="@font/nmedium"
          android:id="@+id/cart_jmlh"
          android:layout_width="match_parent"
          android:layout_height="match_parent"

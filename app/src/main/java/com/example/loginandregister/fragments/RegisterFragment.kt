@@ -56,8 +56,7 @@ class RegisterFragment : Fragment() {
                         "Belum ada alamat"
                     )
                     //user.uid = auth.currentUser!!.uid
-                    addDataToUserModel(user)
-                    registerUser(user.email, user.password)
+                    registerUser(user)
 
                 }
             }
@@ -75,14 +74,15 @@ class RegisterFragment : Fragment() {
         }
     }
 
-    private fun registerUser(email: String, password: String) {
+    private fun registerUser(user: UserModel) {
 
-        auth.createUserWithEmailAndPassword(email, password)
+        auth.createUserWithEmailAndPassword(user.email, user.password)
             .addOnCompleteListener { task ->
 
                 if (task.isSuccessful) {
 
                     Toast.makeText(requireActivity() , "Sukses Membuat Akun" , Toast.LENGTH_SHORT).show()
+                    addDataToUserModel(user)
 
                     Navigation.findNavController(requireView())
                         .navigate(R.id.action_registerFragment2_to_loginFragment2)

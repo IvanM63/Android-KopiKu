@@ -14,9 +14,10 @@
         android:text="Pesanan 1"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:fontFamily="@font/nbold" />
 
     <TextView
+        android:fontFamily="@font/nmedium"
         android:id="@+id/pesanan_tv_ongkir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,6 +28,7 @@
         android:textSize="15sp" />
 
     <TextView
+        android:fontFamily="@font/nmedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/pesanan_judul"
@@ -37,6 +39,7 @@
         android:textColor="@color/black" />
 
     <TextView
+        android:fontFamily="@font/nmedium"
         android:id="@+id/pesanan_tv_total"
         android:layout_below="@id/pesanan_tv_ongkir"
         android:layout_width="wrap_content"
@@ -47,6 +50,7 @@
         android:textSize="15sp" />
 
     <TextView
+        android:fontFamily="@font/nmedium"
         android:id="@+id/pesanan_ed_total"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,7 +71,7 @@
         android:text="Status : Sedang dikirim"
         android:textColor="@color/black"
         android:textSize="15sp"
-        android:textStyle="bold" />
+        android:fontFamily="@font/nbold" />
 
     <View
         android:layout_width="match_parent"

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FBFBFB"
     tools:context=".unused.PesananFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,7 +17,7 @@
         android:text="Pesanan"
         android:textColor="@color/black"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:fontFamily="@font/nbold" />
 
     <View
         android:id="@+id/view1"

@@ -24,7 +24,7 @@
         android:text="Sign In"
         android:textColor="@color/black"
         android:textSize="35dp"
-        android:textStyle="bold" />
+        android:fontFamily="@font/nbold" />
 
     <LinearLayout
         android:id="@+id/kotak"
@@ -36,6 +36,7 @@
 
 
         <EditText
+            android:fontFamily="@font/nmedium"
             android:id="@+id/login_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -46,6 +47,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
+            android:fontFamily="@font/nmedium"
             android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,16 +59,19 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:fontFamily="@font/nmedium"
         android:id="@+id/login_button_login"
         style="@style/ButtonCoklat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/kotak"
+        android:textSize="18dp"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="30dp"
         android:text="LOGIN" />
 
     <TextView
+        android:fontFamily="@font/nmedium"
         android:id="@+id/login_forgot_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -78,6 +83,7 @@
         android:textColor="@color/barn_red" />
 
     <TextView
+        android:fontFamily="@font/nmedium"
         android:id="@+id/login_button_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

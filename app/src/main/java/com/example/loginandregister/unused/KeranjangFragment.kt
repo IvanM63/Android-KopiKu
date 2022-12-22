@@ -34,7 +34,7 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
     private lateinit var cartList: ArrayList<KeranjangModel>
     private lateinit var auth: FirebaseAuth
     private lateinit var adapter: KeranjangAdapter
-    private var subTotalPrice = 0
+    private var subTotalPrice = 10000
     private var totalPrice = 0
 
     private var orderDatabaseReference = Firebase.firestore.collection("orders")
@@ -49,6 +49,7 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -61,10 +62,6 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
             requireActivity().findViewById<BottomNavigationView>(R.id.bottom_navigationView)
         bottomNavigation.visibility = View.VISIBLE
         //------------------------//
-
-        /*binding.cartActualToolbar.setNavigationOnClickListener {
-            Navigation.findNavController(requireView()).popBackStack()
-        }*/
 
 
         val layoutManager = LinearLayoutManager(context)
@@ -87,8 +84,10 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
             if (cartList.isEmpty()) {
                 Toast.makeText(requireActivity(),"Keranjang kamu kosong nih!", Toast.LENGTH_LONG).show()
             } else {
+                subTotalPrice = 10000
                 Navigation.findNavController(requireView())
                     .navigate(R.id.action_keranjangFragment_to_checkoutFragment)
+
             }
         }
     }
