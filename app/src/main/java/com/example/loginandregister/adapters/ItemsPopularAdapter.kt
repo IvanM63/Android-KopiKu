@@ -11,6 +11,7 @@ import com.example.loginandregister.models.ItemsModel
 class ItemsPopularAdapter(
     private val context: Context,
     private val list: List<ItemsModel>,
+    private val productClickInterface: ProductOnClickInterface,
 ) : RecyclerView.Adapter<ItemsPopularAdapter.ViewHolder>(){
 
     inner class ViewHolder(val binding: PopularItemBinding) :
@@ -34,9 +35,9 @@ class ItemsPopularAdapter(
             popPrice.text = "Rp ${item.price}"
         }
 
-        /*holder.itemView.setOnClickListener {
+        holder.itemView.setOnClickListener {
             productClickInterface.onClickProduct(list[position])
-        }*/
+        }
 
     }
 

@@ -21,4 +21,7 @@
     <color name="bottom_nav_selected_item">#9E7759</color>
     <color name="fragment_bg_color">#FDF8F4</color>
 
+    <color name="underline">#C6C6C8</color>
+    <color name="bg_send">#DDF5F4</color>
+
 </resources>

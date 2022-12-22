@@ -14,6 +14,8 @@ import com.example.loginandregister.databinding.FragmentLoginBinding
 import com.example.loginandregister.databinding.FragmentRegisterBinding
 import com.example.loginandregister.models.UserModel
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 
 private val TAG = "RegisterFragment"
@@ -21,6 +23,8 @@ private val TAG = "RegisterFragment"
 class RegisterFragment : Fragment() {
     private lateinit var binding: FragmentRegisterBinding
     private lateinit var auth: FirebaseAuth
+
+    private val userDatabaseReference = Firebase.firestore.collection("users")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,15 +48,31 @@ class RegisterFragment : Fragment() {
                     registerPassword.text.isNotEmpty()
                 ) {
                     val user = UserModel(
+                        "",
                         registerFullName.text.toString().trim(),
+                        registerUsername.text.toString().trim(),
                         registerEmail.text.toString().trim(),
-                        registerPassword.text.toString().trim()
+                        registerPassword.text.toString().trim(),
+                        "Belum ada alamat"
                     )
+                    //user.uid = auth.currentUser!!.uid
+                    addDataToUserModel(user)
                     registerUser(user.email, user.password)
+
                 }
             }
         }
 
+    }
+
+    private fun addDataToUserModel(user: UserModel) {
+        userDatabaseReference.add(user).addOnCompleteListener{task ->
+            if(task.isSuccessful){
+                Toast.makeText(requireContext(), "Berhasil Menambahkan User ke Collection", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(requireContext(), task.exception!!.localizedMessage!!, Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun registerUser(email: String, password: String) {

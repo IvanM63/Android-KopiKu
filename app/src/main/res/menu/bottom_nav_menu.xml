@@ -10,7 +10,15 @@
         android:icon="@drawable/ic_cart"
         android:title="Keranjang" />
     <item
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Search" />
+    <item
         android:id="@+id/pesananFragment"
         android:icon="@drawable/ic_order"
         android:title="Pesanan" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="Profile" />
 </menu>

@@ -15,11 +15,19 @@ import com.example.loginandregister.adapters.KeranjangAdapter
 import com.example.loginandregister.databinding.FragmentKeranjangBinding
 import com.example.loginandregister.databinding.FragmentLoginBinding
 import com.example.loginandregister.models.KeranjangModel
+import com.example.loginandregister.models.PesananModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withContext
+import java.lang.Exception
 
 class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
     private lateinit var binding: FragmentKeranjangBinding
@@ -68,18 +76,19 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
         binding.rvCarts.adapter = adapter
         binding.rvCarts.layoutManager = layoutManager
 
+        //Teken checkout buat ke FragmentCheckout
+        //go to search
+        binding.keranjangCheckout.setOnClickListener{
+            Navigation.findNavController(requireView())
+                .navigate(R.id.action_keranjangFragment_to_checkoutFragment)
+        }
+
         binding.keranjangCheckout.setOnClickListener {
             if (cartList.isEmpty()) {
                 Toast.makeText(requireActivity(),"Keranjang kamu kosong nih!", Toast.LENGTH_LONG).show()
             } else {
-                Toast.makeText(requireActivity(),"Wah! kamu baru saja memesan dengan total Rp ${subTotalPrice}", Toast.LENGTH_LONG).show()
-                cartList.clear()
-                binding.keranjangSubtotal.text ="0"
-                // TODO: remove the data of the Products from the fireStore after checkout or insert a boolean isDelivered
-                pesananDatabaseReference.whereEqualTo("uid",auth.currentUser!!.uid).get().addOnCompleteListener {productToDelete ->
-
-                }
-                adapter.notifyDataSetChanged()
+                Navigation.findNavController(requireView())
+                    .navigate(R.id.action_keranjangFragment_to_checkoutFragment)
             }
         }
     }
@@ -120,7 +129,6 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
 
     override fun onLongRemove(item: KeranjangModel , position:Int) {
 
-
         orderDatabaseReference
             .whereEqualTo("uid",item.uid)
             .whereEqualTo("pid",item.pid)
@@ -140,4 +148,43 @@ class KeranjangFragment : Fragment(), KeranjangAdapter.OnLongClickRemove {
             }
 
     }
+
+    private fun deleteCart(keranjang:KeranjangModel) = CoroutineScope(Dispatchers.IO).launch {
+        val personQuery = orderDatabaseReference
+            .whereEqualTo("uid",keranjang.uid)
+            .get()
+            .await()
+        if(personQuery.documents.isNotEmpty()) {
+            for(documents in personQuery) {
+                try {
+                    orderDatabaseReference.document(documents.id).delete().await()
+                    Toast.makeText(requireContext(), "Berhasil Menghapus", Toast.LENGTH_SHORT).show()
+                    /*pesananDatabaseReference.document(documents.id).update(mapOf(
+                        "uid" to FieldValue.delete()
+                    ))*/
+                } catch (e: Exception) {
+                    withContext(Dispatchers.Main) {
+                        //Toast.makeText(requireContext(), e.message, Toast.LENGTH_LONG).show()
+                    }
+                }
+            }
+        } else {
+            withContext(Dispatchers.Main) {
+                Toast.makeText(requireContext(), "Cart tidak ditemukan di database", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun addToPesanan(keranjang: KeranjangModel) {
+        val pesanan = PesananModel(keranjang.uid, "Sedang Dikirim",subTotalPrice.toString())
+        pesananDatabaseReference.add(pesanan).addOnCompleteListener{task ->
+            if(task.isSuccessful){
+                Toast.makeText(requireContext(), "Berhasil Menambahkan ke Pesanan", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(requireContext(), task.exception!!.localizedMessage!!, Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+
 }

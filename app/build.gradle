@@ -2,7 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
-    id 'kotlin-parcelize'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
     id 'androidx.navigation.safeargs'
 
 }
@@ -76,6 +77,12 @@ dependencies {
 
     //Rounded ImageView
     implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //rxjs
+    def rxkotlin_version = '2.1.0'
+    def rxandroid_version = '2.0.1'
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
 
 }
 

@@ -25,6 +25,7 @@ class PesananAdapter(
 
         holder.binding.pesananJudul.text = "Pesanan ${position+1}"
         holder.binding.pesananStatus.text = "Status : ${currentItem.status}"
+        holder.binding.pesananEdTotal.text = "Rp ${currentItem.sub_total}"
 
     }
 

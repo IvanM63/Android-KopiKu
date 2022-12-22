@@ -6,12 +6,24 @@
     tools:context=".unused.KeranjangFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tv_keranjang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:gravity="center"
+        android:text="Keranjang"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_carts"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/tv_ongkos_kirim"
-        android:layout_marginBottom="5dp" />
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/tv_keranjang"/>
 
     <TextView
         android:id="@+id/tv_ongkos_kirim"

@@ -64,13 +64,13 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductOnClickInterface {
 
         //Implement Popular Items Recycle Items
         val productLayoutManagerPop = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        itemAdapter2 = ItemsPopularAdapter(requireContext(), itemListPopular)
+        itemAdapter2 = ItemsPopularAdapter(requireContext(), itemListPopular, this)
         binding.rvPopular.layoutManager = productLayoutManagerPop
         binding.rvPopular.adapter = itemAdapter2
+
         setItemsPopular()
 
-        //Testing User
-        Toast.makeText(requireContext(),auth.currentUser!!.email, Toast.LENGTH_SHORT).show()
+
 
         //go to search
         binding.searchBox.setOnClickListener{
@@ -117,7 +117,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ProductOnClickInterface {
                             itemListPopular.add(products!!)
                         }
                     }
-                    itemAdapter.notifyDataSetChanged()
+                    itemAdapter2.notifyDataSetChanged()
                 }
             }
 

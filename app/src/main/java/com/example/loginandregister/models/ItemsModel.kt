@@ -1,9 +1,6 @@
 package com.example.loginandregister.models
 
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
 
-@Parcelize
 data class ItemsModel(
     val id: String,
     val name:String,
@@ -11,7 +8,7 @@ data class ItemsModel(
     val description: String? = null,
     val rating:String,
     val price:String,
-    val img_url:String): Parcelable {
+    val img_url:String) {
 
     constructor(): this("0", "", "","","","","")
 }

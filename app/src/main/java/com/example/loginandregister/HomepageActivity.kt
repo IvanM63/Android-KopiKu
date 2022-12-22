@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.AttributeSet
 import android.view.View
+import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
@@ -31,6 +32,9 @@ class HomepageActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         setupWithNavController(binding.bottomNavigationView, navController)
+
+        //Testing User
+        Toast.makeText(this, "Welcome ${auth.currentUser!!.email}", Toast.LENGTH_SHORT).show()
 
         //Logout Button
         /*binding.homepageButtonLogout.setOnClickListener {

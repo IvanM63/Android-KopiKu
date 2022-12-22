@@ -1,40 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/pesanan_judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="horizontal">
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="5dp"
+        android:text="Pesanan 1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:layout_marginHorizontal="20dp"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/pesanan_tv_ongkir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pesanan_judul"
+        android:layout_marginStart="38dp"
+        android:text="Ongkos Kirim"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/pesanan_judul"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="Pesanan 1"
-                android:textColor="@color/black"/>
-            <TextView
-                android:id="@+id/pesanan_status"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:text="Status : Sedang dikirim"
-                android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pesanan_judul"
+        android:layout_marginEnd="38dp"
+        android:layout_toRightOf="@id/pesanan_tv_ongkir"
+        android:gravity="right"
+        android:text="Rp 10000"
+        android:textColor="@color/black" />
 
-        </LinearLayout>
+    <TextView
+        android:id="@+id/pesanan_tv_total"
+        android:layout_below="@id/pesanan_tv_ongkir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:text="Sub Total"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/pesanan_ed_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pesanan_tv_ongkir"
+        android:layout_marginEnd="38dp"
+        android:layout_toRightOf="@id/pesanan_tv_ongkir"
+        android:gravity="right"
+        android:text="Rp 100000"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/pesanan_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pesanan_tv_total"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="3dp"
+        android:text="Status : Sedang dikirim"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/pesanan_status"
+        android:layout_marginTop="20dp"
+        android:background="@color/underline" />
 
 
-    </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+</RelativeLayout>
