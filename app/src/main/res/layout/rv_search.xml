@@ -3,11 +3,38 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/search_judul"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ARABIKA KOFE"
-        android:textSize="30sp"/>
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="15dp">
+
+        <ImageView
+            android:id="@+id/search_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/kopi1" />
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:fontFamily="@font/nmedium"
+            android:layout_toRightOf="@id/search_image"
+            android:id="@+id/search_judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Arabika Coffe"
+            android:textSize="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:src="@color/underline"/>
+
+
+
 
 </androidx.cardview.widget.CardView>

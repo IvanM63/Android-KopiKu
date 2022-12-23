@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.loginandregister.SwipeToDelete
 import com.example.loginandregister.databinding.RvCartBinding
 import com.example.loginandregister.models.KeranjangModel
 
@@ -16,12 +17,12 @@ class KeranjangAdapter(
 
     inner class ViewHolder(val binding:RvCartBinding):RecyclerView.ViewHolder(binding.root){
 
-        /*private val onSwipeDelete = object : SwipeToDelete() {
+        private val onSwipeDelete = object : SwipeToDelete() {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.adapterPosition
                 list.removeAt(position)
             }
-        }*/
+        }
 
     }
 

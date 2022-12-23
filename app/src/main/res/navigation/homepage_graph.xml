@@ -76,6 +76,9 @@
         <action
             android:id="@+id/action_searchFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_detailItemFragment2"
+            app:destination="@id/detailItemFragment2" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
