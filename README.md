@@ -16,6 +16,7 @@ An online food order and delivery app, but it's for coffee and coffee beans. The
 - Register as user
 - Login as user
 - Edit Profile
+- Search for a specific coffee
 
 ## Screenshots
 
