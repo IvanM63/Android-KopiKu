@@ -53,10 +53,12 @@ An online food order and delivery app, but it's for coffee and coffee beans. The
   <tr>
     <td>Order Screen</td>
     <td>Profile Screen</td>
+    <td>Search Coffee</td>
   </tr>
   <tr>
     <td><img src="https://raw.githubusercontent.com/IvanM63/Android-KopiKu/main/screenshot/OrderScreen.jpg" width="220"></td>
     <td><img src="https://raw.githubusercontent.com/IvanM63/Android-KopiKu/main/screenshot/ProfileScreen.jpg" width="220"></td>
+    <td><img src="https://raw.githubusercontent.com/IvanM63/Android-KopiKu/main/screenshot/SearchScreen.jpg" width="220"></td>
   </tr>
  </table>
  </p>
